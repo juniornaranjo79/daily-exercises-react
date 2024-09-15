@@ -1,0 +1,24 @@
+.ul-list {
+  list-style-type: none;
+  padding: 0 10px;
+}
+.card-task {
+  border: 2px solid;
+  border-radius: 30px;
+  padding: 15px;
+  margin-bottom: 10px;
+}
+.card-title {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+.card-actions {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+h1,
+p {
+  margin: 0;
+}

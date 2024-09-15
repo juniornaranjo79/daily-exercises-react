@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import DynamicForm from "./components/dayFour/DynamicForm";
+//import TaskList from "./components/dayThree/TaskList";
+//import Greeting from "./components/dayOne/Greeting";
+//import Count from "./components/dayTwo/Count";
 
 function App() {
+  //const [name, setName] = useState("Junior");
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <Greeting name={name} /> */}
+      {/* <Count number={0} /> */}
+      {/* <TaskList /> */}
+      <DynamicForm />
     </div>
   );
 }
