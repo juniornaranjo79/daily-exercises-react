@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useUserContext } from "./Hooks/UserContext/UserContext";
+import "./StyleUsers.css";
 
 export default function UserForm() {
   // esto provee la configuracion del contexto
@@ -33,13 +34,14 @@ export default function UserForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="user-from">
       <input
         type="text"
         name="name"
         value={user.name}
         onChange={handleChange}
         placeholder="Name"
+        className="input-user"
         required
       />
       <input
@@ -48,6 +50,7 @@ export default function UserForm() {
         value={user.email}
         onChange={handleChange}
         placeholder="Email"
+        className="input-user"
         required
       />
       <button type="submit">{editUser ? "Update" : "Add"} User </button>

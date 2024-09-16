@@ -1,0 +1,47 @@
+/* General */
+p {
+  margin: 0;
+}
+h2 {
+  margin: 0;
+}
+.container {
+  padding: 15px;
+}
+/* UserForm */
+.user-from {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+.input-user {
+  border: 1px solid #000;
+  border-radius: 8px;
+  padding: 10px;
+}
+/* UserList */
+.users-list {
+  list-style-type: none;
+  padding: 0;
+}
+.user-card {
+  background: #fff;
+  border: 2px solid #000;
+  border-radius: 15px;
+  box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+}
+.user-title-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+.font-bold {
+  font-weight: 700;
+}
+.actions-card {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
