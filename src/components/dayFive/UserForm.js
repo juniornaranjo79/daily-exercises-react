@@ -13,13 +13,38 @@ export default function UserForm() {
   const [errorMessagesName, setErrorMessagesName] = useState("");
   const [errorMessagesEmail, setErrorMessagesEmail] = useState("");
 
-  console.log("editUser", editUser);
   useEffect(() => {
     if (editUser) {
-      console.log("editUserEffect", editUser);
       setUser(editUser);
     }
   }, [editUser]);
+
+  const validateInput = () => {
+    if (user.name === "" || user.name === null) {
+      setErrorMessagesName("El campo name no puede estar vacio");
+      return true;
+    } else if (user.name.length < 3) {
+      setErrorMessagesName("El campo name no es válido");
+      return true;
+    } else {
+      setErrorMessagesName("");
+      return false;
+    }
+  };
+
+  const validateEmail = () => {
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (user.email === "" || user.email === null) {
+      setErrorMessagesEmail("El campo de email no puede estar vacio");
+      return true;
+    } else if (!emailRegex.test(user.email)) {
+      setErrorMessagesEmail("El formato del email no es válido");
+      return true;
+    } else {
+      setErrorMessagesEmail("");
+      return false;
+    }
+  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -33,6 +58,14 @@ export default function UserForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    const nameHasError = validateInput();
+    const emailHasError = validateEmail();
+
+    if (nameHasError || emailHasError) {
+      return;
+    }
+
     if (editUser) {
       updateUser(user);
     } else {
@@ -52,10 +85,11 @@ export default function UserForm() {
           onChange={handleChange}
           placeholder="Name"
           className="input-user"
-          required
         />
         <div>
-          <p>{errorMessagesName}</p>
+          {errorMessagesName && (
+            <p className="error-messages ">{errorMessagesName}</p>
+          )}
         </div>
       </div>
       <div>
@@ -66,13 +100,14 @@ export default function UserForm() {
           onChange={handleChange}
           placeholder="Email"
           className="input-user"
-          required
         />
         <div>
-          <p>{errorMessagesEmail}</p>
+          {errorMessagesEmail && (
+            <p className="error-messages ">{errorMessagesEmail}</p>
+          )}
         </div>
       </div>
-      <div>
+      <div className="actions">
         <button type="submit">{editUser ? "Update" : "Add"} User </button>
       </div>
     </form>

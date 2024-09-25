@@ -5,6 +5,11 @@ p {
 h2 {
   margin: 0;
 }
+button {
+  border: none;
+  border-radius: 30px;
+  padding: 5px 15px;
+}
 .container {
   padding: 15px;
 }
@@ -13,6 +18,9 @@ h2 {
   display: flex;
   gap: 15px;
   justify-content: center;
+}
+.actions {
+  display: flex;
 }
 .input-user {
   border: 1px solid #000;
@@ -44,4 +52,8 @@ h2 {
   display: flex;
   justify-content: space-between;
   padding: 10px;
+}
+.error-messages {
+  color: #e61919;
+  font-size: 12px;
 }
