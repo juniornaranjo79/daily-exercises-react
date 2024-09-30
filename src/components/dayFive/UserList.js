@@ -26,7 +26,12 @@ export default function UserList() {
                 >
                   Edit
                 </button>
-                <button onClick={() => deleteUser(user.id)}>Delete</button>
+                <button
+                  onClick={() => deleteUser(user.id)}
+                  aria-label={`Eliminar ${user.name}`}
+                >
+                  Delete
+                </button>
               </div>
             </li>
           ))
