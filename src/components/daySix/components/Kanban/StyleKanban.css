@@ -1,0 +1,12 @@
+.tablero-kanban {
+  display: flex;
+  gap: 8px;
+  justify-content: space-around;
+  padding: 10px;
+}
+.column-kanba {
+  background-color: #bfbdbd;
+  border-radius: 30px;
+  padding: 10px;
+  width: 100%;
+}

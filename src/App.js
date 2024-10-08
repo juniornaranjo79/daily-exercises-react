@@ -1,4 +1,6 @@
 import "./App.css";
+import Kanban from "./components/daySix/components/Kanban/Kanban";
+import TaskForm from "./components/daySix/components/TaskForm/TaskForm";
 //import { UserProvider } from "./components/dayFive/Hooks/UserContext/UserContext";
 //import DynamicForm from "./components/dayFour/DynamicForm";
 //import TaskList from "./components/dayThree/TaskList";
@@ -21,6 +23,8 @@ function App() {
         {/* <h1>User Management</h1>
         <UserForm />
         <UserList /> */}
+        <TaskForm />
+        <Kanban />
       </div>
     </KanbanProvider>
   );
