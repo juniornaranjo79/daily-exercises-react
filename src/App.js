@@ -1,6 +1,4 @@
 import "./App.css";
-import Kanban from "./components/daySix/components/Kanban/Kanban";
-import TaskForm from "./components/daySix/components/TaskForm/TaskForm";
 //import { UserProvider } from "./components/dayFive/Hooks/UserContext/UserContext";
 //import DynamicForm from "./components/dayFour/DynamicForm";
 //import TaskList from "./components/dayThree/TaskList";
@@ -9,6 +7,7 @@ import TaskForm from "./components/daySix/components/TaskForm/TaskForm";
 //import UserForm from "./components/dayFive/UserForm";
 //import UserList from "./components/dayFive/UserList";
 import { KanbanProvider } from "./components/daySix/Hooks/KanbanContext";
+import TheKanban from "./components/daySix/TheKanban";
 
 function App() {
   //const [name, setName] = useState("Junior");
@@ -23,8 +22,7 @@ function App() {
         {/* <h1>User Management</h1>
         <UserForm />
         <UserList /> */}
-        <TaskForm />
-        <Kanban />
+        <TheKanban />
       </div>
     </KanbanProvider>
   );

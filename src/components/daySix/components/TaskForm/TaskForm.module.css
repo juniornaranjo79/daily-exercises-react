@@ -1,0 +1,17 @@
+.containerForm {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.form {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  gap: 8px;
+}
+
+.input {
+  width: 100%;
+}

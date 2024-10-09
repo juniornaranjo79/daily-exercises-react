@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useKanbanContext } from "../../Hooks/KanbanContext";
+import styles from "./TaskForm.module.css";
 
 export default function TaskForm() {
   const { addTask } = useKanbanContext();
@@ -23,21 +24,25 @@ export default function TaskForm() {
     <div>
       <button onClick={seeForm}>Nueva tarea</button>
       {showForm && (
-        <form onSubmit={handleSubmit}>
-          <input
-            value={title}
-            type="text"
-            onChange={(e) => setTitle(e.target.value)}
-            placeholder="Título"
-            required
-          />
-          <textarea
-            value={description}
-            onChange={(e) => setDescription(e.target.value)}
-            placeholder="Descripción"
-          />
-          <button type="submit">Agregar tarea</button>
-        </form>
+        <div className={styles.containerForm}>
+          <form onSubmit={handleSubmit} className={styles.form}>
+            <input
+              value={title}
+              type="text"
+              onChange={(e) => setTitle(e.target.value)}
+              placeholder="Título"
+              required
+              className={styles.input}
+            />
+            <textarea
+              value={description}
+              onChange={(e) => setDescription(e.target.value)}
+              placeholder="Descripción"
+              className={styles.input}
+            />
+            <button type="submit">Agregar tarea</button>
+          </form>
+        </div>
       )}
     </div>
   );
