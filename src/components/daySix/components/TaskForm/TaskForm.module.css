@@ -15,3 +15,15 @@
 .input {
   width: 100%;
 }
+.closeForm {
+  display: flex;
+  justify-content: end;
+  min-width: 350px;
+}
+.errorMessagesRed {
+  color: red;
+}
+
+.errorMessagesRedWhite {
+  color: white;
+}
